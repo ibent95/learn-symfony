@@ -1,3 +1,34 @@
-#index:
-#    path: /
-#    controller: App\Controller\DefaultController::index
+index:
+    path: /
+    controller: App\Controller\MainController::index
+    methods: GET
+
+items:
+    path: /items
+    controller: App\Controller\ItemsController::index
+    methods: GET
+
+item:
+    path: /item/{uuid}
+    controller: App\Controller\ItemsController::getItemByUUID
+    methods: GET
+
+item_create:
+    path: /item
+    controller: App\Controller\ItemsController::createItem
+    methods: POST
+
+item_update:
+    path: /item/{uuid}
+    controller: App\Controller\ItemsController::changeItem
+    methods: PUT
+
+item_delete:
+    path: /item/{uuid}
+    controller: App\Controller\ItemsController::deleteItem
+    methods: DELETE
+
+item_create_update:
+    path: /item/{uuid}
+    controller: App\Controller\ItemsController::createUpdateItem
+    methods: POST|PUT

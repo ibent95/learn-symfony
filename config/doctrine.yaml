@@ -1,0 +1,5 @@
+doctrine:
+  dbal:
+    types:
+        datetime:   DoctrineExtensions\DBAL\Types\UTCDateTimeType
+        datetimez:  DoctrineExtensions\DBAL\Types\UTCDateTimeType

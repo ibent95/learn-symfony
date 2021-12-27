@@ -5,6 +5,11 @@ framework:
 
         # The "app" cache stores to the filesystem by default.
         # The data in this cache should persist between deploys.
+
+        app: cache.adapter.filesystem
+        system: cache.adapter.system
+        directory: '%kernel.cache_dir%/pools'
+
         # Other options include:
 
         # Redis
